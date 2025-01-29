@@ -12,15 +12,17 @@ class Product {
 
     public:
     Product(long barcode = 0, string name = "Produto sem nome");
-    ~Product();
+    virtual ~Product();
 
     void setCode(long code);
     long getCode(void) const;
     string getName() const;
     void setName(string name);
-    void scanner(void);
+    virtual void scanner(void);
     virtual void print(void) const;
     friend Product *isLowerCode(Product& p1, Product& p2);
+
+
 
 };
 

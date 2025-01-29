@@ -19,7 +19,7 @@ class PrePackedFood : public Product{
 
     void setUnitPrice(double x);
     double getUnitPrice() const;
-    void scanner();
+    void scanner()override;
     void print() const override;
 
 

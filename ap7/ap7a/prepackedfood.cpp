@@ -21,8 +21,11 @@ void PrePackedFood::scanner(){
     string name;
     double unitPrice;
 
+
+    cout << "Você escolheu alimento PRÉ-EMBALADO!" << endl;
     cout << "Digite na seguinte ordem o código de barras, o nome e o preço do produto que deseja cadastrar: " << endl;
     cin >> barcode >> name >> unitPrice;
+    cout << endl;
 
     setCode(barcode);
     setName(name);
@@ -34,4 +37,5 @@ void PrePackedFood::print() const{
     cout << "Nome do produto: " << getName() << endl;
     cout << "Código de barra do produto: " << getCode() << endl;
     cout << "Preço unitário do produto: " << getUnitPrice() << endl;
+    cout << endl;
 }

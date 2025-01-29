@@ -22,7 +22,7 @@ class FreshFood : public Product{
     double getPeso() const;
     void setPesoPorKilo(double pesoPorKilo);
     double getPesoPorKilo() const;
-    void scanner();
+    void scanner() override;
     void print() const override;
 
 };

@@ -26,8 +26,10 @@ void FreshFood::scanner(){
     double peso;
     double pesoPorKilo;
 
+    cout << "Você escolheu alimento FRESCO!" << endl;
     cout << "Digite na seguinte ordem o código de barras, o nome, o peso e o peso por quilo do produto que deseja cadastrar: " << endl;
     cin >> barcode >> name >> peso >> pesoPorKilo;
+    cout << endl;
     setCode(barcode);
     setName(name);
     setPeso(peso);
@@ -39,5 +41,6 @@ void FreshFood::print()const{
     cout << "Código de barra do produto: " << getCode() << endl;
     cout << "Peso do produto: " << getPeso() << endl;
     cout << "Peso por quilo do produto: " << getPesoPorKilo() << endl;
+    cout << endl;
 
 }
