@@ -15,20 +15,38 @@ int main(void){
 
     FreshFood *freshfoodPtr = new FreshFood(1003, "Mamão", 10, 7);
 
-    products[0]->print();
-    products[1]->print();
-    products[2]->print();
-
     freshfoodPtr->print();
+
+    //Aprendendo a mexer com downcasting e upcasting:
+    
+    /*PrePackedFood *prepackedPtr = dynamic_cast<PrePackedFood*>(products[0]);
+
+    if (prepackedPtr){
+        prepackedPtr->print();
+    }*/
+
+    /*Product *productPtr = products[1];
+    productPtr->Product::print();*/
+
+    Product *productPtr2 = freshfoodPtr;
+    productPtr2->Product::print();
+
+
+
 
 
     for (int i = 0; i < 3; i++){
         delete products[i];
     }
 
+    //delete productPtr;
+    delete productPtr2;
 
-    delete freshfoodPtr;
+
+    //delete freshfoodPtr;
 
 
     return 0;
 }
+
+// g++ -std=c++17 products.cpp freshfood.cpp prepackedfood.cpp main2.cpp -o main2
