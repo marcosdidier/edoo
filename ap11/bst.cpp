@@ -28,6 +28,17 @@ class BST{
     public:
     BST(): root(nullptr), nodecount(0) {}
 
+    ~BST(){
+        clear(root);
+    }
+
+    void clear(Node<E>* rt) {
+        if (rt == nullptr) return;
+        clear(rt->left);
+        clear(rt->right);
+        delete rt;
+    }
+
     E find(E k){
         int *result = findhelp(root, k);
         if (result == nullptr) { return -1; }
